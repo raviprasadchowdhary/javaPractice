@@ -4,40 +4,43 @@ public class bubbleSort {
 
 	public static void main(String[] args) {
 		int[] inputArray = { 64, 34, 25, 12, 22, 11, 90 };
-		
-		System.out.println("Before sort");
+
+		System.out.print("Before sort: ");
 		printArray(inputArray);
-		
-		bubbleSortArray(inputArray);
-		
-		System.out.println("After sort");
+
+		bubbleSortTheArray(inputArray);
+
+		System.out.print("After sort: ");
 		printArray(inputArray);
-		
-
-	}
-
-	public static void bubbleSortArray(int[] inputArray) {
-
-		int n = inputArray.length;
-
-		for (int i = 0; i < n - 1; i++) {
-			for (int j = 0; j < n - 1 - i; j++) {
-				if (inputArray[j] > inputArray[j + 1]) {
-					//swap elements
-					int temp = inputArray[j + 1];
-					inputArray[j + 1] = inputArray[j];
-					inputArray[j] = temp;
-				}
-			}
-		}
 
 	}
 	
-	public static void printArray(int[] inputArray) {
-		for(int num : inputArray) {
-			System.out.print(num + " ");
+	/*
+	 * 	==========================================================================================================
+	 * 	Methods
+	 * 	==========================================================================================================
+	*/
+	
+	// print array
+	public static void printArray(int[] input) {
+		for (int i : input) {
+			System.out.print(i + " ");
 		}
-		System.out.println() ;
+		System.out.println();
+	}
+	
+	//	bubble sort the array
+	public static void bubbleSortTheArray(int[] input) {
+		int l = input.length;
+		for (int i = 0; i < l - 1; i++) {
+			for (int j = 0; j < l - 1 - i; j++) {
+				if (input[j] > input[j + 1]) {
+					int temp = input[j + 1];
+					input[j + 1] = input[j];
+					input[j] = temp;
+				}
+			}
+		}
 	}
 
 }
