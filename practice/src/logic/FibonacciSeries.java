@@ -1,4 +1,4 @@
-package practice;
+package logic;
 
 import java.util.Scanner;
 
