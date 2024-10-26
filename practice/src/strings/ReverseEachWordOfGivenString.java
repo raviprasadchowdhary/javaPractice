@@ -8,6 +8,7 @@ public class ReverseEachWordOfGivenString {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter a string of which each word is to be reversed: ");
 		String input = scan.nextLine();
+		scan.close();
 
 		reverseEachWordOfGivenString(input);
 	}
