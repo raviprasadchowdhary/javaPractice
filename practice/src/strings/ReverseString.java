@@ -17,13 +17,12 @@ public class ReverseString {
 
 	public static String reverseString(String input) {
 		char c;
-		String newString = "";
+		String reversedString = "";
 
-		for (int i = 0; i < input.length(); i++) {
-			c = input.charAt(i);
-			newString = c + newString;
-		}
-		return newString;
+		for (int i = input.length()-1; i >=0; i--) {
+	        reversedString += input.charAt(i); // Append characters to the end of newString
+	    }
+		return reversedString;
 	}
 
 	public static String reverseStringByStringBuilder(String input) {
