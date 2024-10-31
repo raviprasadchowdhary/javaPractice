@@ -25,12 +25,11 @@ public class CountVowelsAndConsonentsInGivenString {
 		int vowel = 0, consonent = 0;
 		char[] inputCharacterArray = input.toCharArray();
 		for (char c : inputCharacterArray) {
-			if ((c >= 'a') && (c <= 'z')) {
-				if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-					vowel++;
-				} else {
-					consonent++;
-				}
+
+			if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+				vowel++;
+			} else if ((c >= 'a' && c <= 'z')) {
+				consonent++;
 			}
 		}
 
